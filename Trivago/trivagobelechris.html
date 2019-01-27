@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Trivago</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="trivagobelechris.css" />
+</head>
+
+<body>
+    <header>
+        <div class="forcolor">
+            <div class="row1">
+                <input type="text" id="search" name="search" placeholder="Champs Elysées, Paris" multiple>
+                <input type="submit" id="searchbut" value="Search">
+            </div>
+            <br />
+            <div class="row2">
+                <div class="boxcheck">
+                    <label for="checkin" id="labelchin">Check-in<br /></label>
+                    <input type="date" id="checkin" name="check in" min=" " value="2018-16-11" required>
+                </div>
+                <div class="boxcheck1">
+                    <label for="checkout" id="labelchout">Check-out <br /></label>
+                    <input type="date" id="checkout" name="check out" min=" " value="2018-16-11" required>
+                </div>
+                <select name="type of room" id="room">
+                    <option value="Single">Single</option>
+                    <option value="Double">Double</option>
+                    <option value="Family rooms">Family rooms</option>
+                </select>
+            </div>
+            <br />
+            <div class="row3">
+                <div class="labels1">
+                    <label for="price">Price</label><br />
+                    <label id="labelmax">$600+</label>
+                    <br />
+                    <input type="range" id="max" name="number" min="60" max="600" step="10" value="1000">
+                </div>
+                <div class="labels2">
+                    <label for="accomodation">Property type</label><br />
+                    <select name="Accomodation" id="accomodation">
+                        <option value="All types" selected="selected">All</option>
+                        <option value="5-star hotels">5-star hotels</option>
+                        <option value="4-star hotels">4-star hotels</option>
+                        <option value="3-star hotels">3-star hotels</option>
+                        <option value="2-star hotels">2-star hotels</option>
+                        <option value="0/1-star hotels">0/1-star hotels</option>
+                        <option value="Vacation rentals">Vacation rentals</option>
+                    </select>
+                </div>
+                <div class="labels3">
+                    <label for="guest rating">Guest rating</label><br />
+                    <select name="Guest rating" id="guestrating">
+                        <option value="">All</option>
+                        <option value="8.5 - 10 Excellent">8.5 - 10 Excellent</option>
+                        <option value="7 - 8.5 Very good">7 - 8.5 Very good</option>
+                        <option value="6 - 7 Good">6 - 7 Good</option>
+                        <option value="2 - 6 Fair">2 - 6 Fair</option>
+                        <option value="0 - 2 Okay">0 - 2 Okay</option>
+                    </select>
+                </div>
+                <div class="labels4">
+                    <label for="hotel location">Hotel location</label><br />
+                    <select name="Hotel location" id="hotellocation">
+                        <option value="Current search">Camps Elysées</option>
+                        <option value="Point of interest">Stay near<br /> Point of interest</option>
+                        <option value="Address">or specific address</option>
+                        <option value="Radious">within radious of</option>
+                    </select>
+                </div>
+                <div class="labels5">
+                    <label for="more filters">More filters</label><br />
+                    <select name="More filters" id="morefilters">
+                        <option value="select">Select</option>
+                        <option value="Popular facilities">Popular facilities & Amenities</option>
+                        <option value="Else">What else should your accomodation have?</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="main">
+        <div class="forcolor">
+            <div id="firstrow">
+                <div class="mapimage">
+                    <img src="trivago3.PNG" id="imgedit" alt="random map">
+                    <div class="container-fluid">
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                            data-lat='21.03' data-lng='105.85'>
+                            View Map
+                        </button>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
+                                    <h4 class="modal-title" id="myModalLabel">Map</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-md-12 modal_body_content">
+                                            <p>Some contents...</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 modal_body_map">
+                                            <div class="location-map" id="location-map">
+                                                <div style="width: 600px; height: 400px;" id="map_canvas"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 modal_body_end">
+                                            <p>Else...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="forfloat">
+                    <label for="sort" id="forsortlabel">Sort by</label>
+                    <select name="Sort" id="sort">
+                        <option value="Our recommendations">Our recommendations</option>
+                        <option value="Rating & Recommended">Rating & Recommended<br /> Point of interest</option>
+                        <option value="Price & Recommended">Price & Recommended</option>
+                        <option value="Distance & Recommended">Distance & Recommended</option>
+                        <option value="Rating only">Rating only<br /> Point of interest</option>
+                        <option value="Price only">Price only</option>
+                        <option value="Distance only">Distance only</option>
+                    </select>
+                </div>
+
+            </div>
+            <section id="forflex2">
+                <div id="forflex21">
+                    <div>
+                        <img src="trivago1.PNG" id="imghotel1" alt="Hotel Lancaster photo" height="200" width="200">
+                        <img src="icon6.png" id="heart" alt="heart icon">
+                    </div>
+                    <div class="description">
+                        <h2 id="elh2">Hotel Lancaster</h2>
+                        <p id="elp">Hotel</p>
+                        <p>Paris, 0.2 miles to Champs Elysées</p>
+                        <p>
+                            <input type="button" id="rate1" value="8.8">
+                            <b>Excellent</b> (1736 reviews)
+                        </p>
+                        <p id="marginexcloc">Excellent location (9.2/10)</p>
+                    </div>
+                </div>
+                <div align="center" class="col2">
+                    <div class="forborder1">
+                        <a id="site1" target="_blank">Hotel website<br />$706</a>
+                        <br />
+                        <a id="site2" target="_blank">Agoda<br />$575</a>
+                        <br />
+                        <a id="site3" target="_blank">Travelocity<br />$708</a>
+                    </div>
+                    <label for="moredeals" id="labelmore">More deals from</label>
+                    <br />
+                    <select name="More deals" id="moredeals">
+                        <option value="$575">$575</option>
+                    </select>
+                </div>
+                <div align="center" class="col3">
+                    <a id="siterec" target="_blank">Hotel website<br />
+                        <p id="recprice">$706</p>
+                    </a>
+                    <br />
+                    <p id="inline1">3 nights for <b id="inline2">$2,119</b></p>
+                    <input type="submit" name="View Deal" value="View Deal" id="viewdeal">
+                </div>
+            </section>
+            <section id="forflex3">
+                <div id="forflex31">
+                    <div>
+                        <img src="trivago2.PNG" id="imghotel2" alt="Prince de Galles photo" height="200" width="200">
+                        <img src="icon6.png" id="heart" alt="heart icon">
+                    </div>
+                    <div class="description1">
+                        <h2 id="elh21">Prince de Galles, a Luxury ...</h2>
+                        <p id="elp1">Hotel</p>
+                        <p>Paris, 0.3 miles to Champs Elysées</p>
+                        <p>
+                            <input type="button" id="rate2" value="9.0">
+                            <b>Excellent</b> (473 reviews)
+                        </p>
+                        <p id="marginexcloc1">Excellent location (9.4/10)</p>
+                    </div>
+
+                </div>
+                <div align="center" class="col21">
+                    <div class="forborder2">
+                        <a id="site11" target="_blank">Orbitz<br />$1.213</a>
+                        <br />
+                        <a id="site21" target="_blank">Trip.com<br />$1.249</a>
+                        <br />
+                        <a id="site31" target="_blank">Expedia<br />$1,213</a>
+                    </div>
+                    <label for="moredeals1" id="labelmore1">More deals from</label>
+                    <br />
+                    <select name="More deals" id="moredeals1">
+                        <option value="$575">$1.213</option>
+                    </select>
+                </div>
+                <div align="center" class="col31">
+                    <a id="siterec1" target="_blank">HotelPower.com<br />
+                        <p id="recprice1">$1,568</p>
+                    </a>
+                    <br />
+                    <a id="siterec11" target="_blank">Travelocity<br />
+                        <p id="recprice2">$1.213</p>
+                    </a>
+                    <br />
+                    <p id="inline11">3 nights for <b id="inline21">$3,638</b></p>
+                    <input type="button" name="Free breakfast" value="Free breakfast" id="freebreakfast">
+                    <br />
+                    <input type="submit" name="View Deal" value="View Deal" id="viewdeal1">
+                </div>
+            </section>
+            <section id="forflex2">
+                <div id="forflex21">
+                    <div>
+                        <img src="trivago1.PNG" id="imghotel1" alt="Hotel Lancaster photo" height="200" width="200">
+                        <img src="icon6.png" id="heart" alt="heart icon">
+                    </div>
+                    <div class="description">
+                        <h2 id="elh2">Hotel Lancaster</h2>
+                        <p id="elp">Hotel</p>
+                        <p>Paris, 0.2 miles to Champs Elysées</p>
+                        <p>
+                            <input type="button" id="rate1" value="8.8">
+                            <b>Excellent</b> (1736 reviews)
+                        </p>
+                        <p id="marginexcloc">Excellent location (9.2/10)</p>
+                    </div>
+                </div>
+                <div align="center" class="col2">
+                    <div class="forborder1">
+                        <a id="site1" target="_blank">Hotel website<br />$706</a>
+                        <br />
+                        <a id="site2" target="_blank">Agoda<br />$575</a>
+                        <br />
+                        <a id="site3" target="_blank">Travelocity<br />$708</a>
+                    </div>
+                    <label for="moredeals" id="labelmore">More deals from</label>
+                    <br />
+                    <select name="More deals" id="moredeals">
+                        <option value="$575">$575</option>
+                    </select>
+                </div>
+                <div align="center" class="col3">
+                    <a id="siterec" target="_blank">Hotel website<br />
+                        <p id="recprice">$706</p>
+                    </a>
+                    <br />
+                    <p id="inline1">3 nights for <b id="inline2">$2,119</b></p>
+                    <input type="submit" name="View Deal" value="View Deal" id="viewdeal">
+                </div>
+            </section>
+            <section id="forflex3">
+                <div id="forflex31">
+                    <div>
+                        <img src="trivago2.PNG" id="imghotel2" alt="Prince de Galles photo" height="200" width="200">
+                        <img src="icon6.png" id="heart" alt="heart icon">
+                    </div>
+                    <div class="description1">
+                        <h2 id="elh21">Prince de Galles, a Luxury ...</h2>
+                        <p id="elp1">Hotel</p>
+                        <p>Paris, 0.3 miles to Champs Elysées</p>
+                        <p>
+                            <input type="button" id="rate2" value="9.0">
+                            <b>Excellent</b> (473 reviews)
+                        </p>
+                        <p id="marginexcloc1">Excellent location (9.4/10)</p>
+                    </div>
+
+                </div>
+                <div align="center" class="col21">
+                    <div class="forborder2">
+                        <a id="site11" target="_blank">Orbitz<br />$1.213</a>
+                        <br />
+                        <a id="site21" target="_blank">Trip.com<br />$1.249</a>
+                        <br />
+                        <a id="site31" target="_blank">Expedia<br />$1,213</a>
+                    </div>
+                    <label for="moredeals1" id="labelmore1">More deals from</label>
+                    <br />
+                    <select name="More deals" id="moredeals1">
+                        <option value="$575">$1.213</option>
+                    </select>
+                </div>
+                <div align="center" class="col31">
+                    <a id="siterec1" target="_blank">HotelPower.com<br />
+                        <p id="recprice1">$1,568</p>
+                    </a>
+                    <br />
+                    <a id="siterec11" target="_blank">Travelocity<br />
+                        <p id="recprice2">$1.213</p>
+                    </a>
+                    <br />
+                    <p id="inline11">3 nights for <b id="inline21">$3,638</b></p>
+                    <input type="button" name="Free breakfast" value="Free breakfast" id="freebreakfast">
+                    <br />
+                    <input type="submit" name="View Deal" value="View Deal" id="viewdeal1">
+                </div>
+            </section>
+        </div>
+    </section>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+        crossorigin="anonymous"></script>
+    <script src="http://maps.googleapis.com/maps/api/js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="trivagobelechris.js"></script>
+</body>
+
+</html>

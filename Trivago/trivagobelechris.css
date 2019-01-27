@@ -1,0 +1,508 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input,
+select {
+    border: 0;
+}
+
+header {
+    background-color: #37454d;
+    border: #37454d;
+}
+
+.forcolor {
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.row1 {
+    display: flex;
+    height: 30px;
+}
+
+#search {
+    margin: 0.4em;
+    font-size: 20px;
+    padding: 0.5em 50px;
+    height: 35px;
+    flex-grow: 4;
+    background-image: url(icon1.PNG);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: 10px center;
+}
+
+#searchbut {
+    background-color: #2069d6;
+    border: none;
+    color: white;
+    padding: 0.6em 0.9em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    flex-grow: 1;
+    margin-block-end: -13px;
+    margin-block-start: 8px;
+    margin-left: -8px;
+    margin-right: 11px;
+}
+
+#searchbut:hover {
+    background-color: #0000ff;
+}
+
+.row2 {
+    display: flex;
+    height: 40px;
+    margin-top: 6px;
+    margin-inline-start: 8px;
+    margin-inline-end: 8px;
+}
+
+.boxcheck {
+    flex-grow: 1;
+    border-left: 6px solid #2069d6;
+    font-size: small;
+    background-color: white;
+    background-image: url(icon3.PNG);
+    background-repeat: no-repeat;
+    background-size: 30px 23px;
+    background-position: left;
+    padding-left: 34px;
+    width: 14%;
+}
+
+#labelchin,
+#labelchout {
+    display: inline;
+}
+
+#checkin,
+#checkout {
+    margin-top: -5px;
+}
+
+.boxcheck1 {
+    flex-grow: 1;
+    border-left: 6px solid orange;
+    margin-inline-start: 8px;
+    font-size: small;
+    background-color: white;
+    background-image: url(icon3.PNG);
+    background-repeat: no-repeat;
+    background-size: 30px 23px;
+    background-position: left;
+    padding-left: 34px;
+    width: 14%;
+}
+
+#room {
+    flex-grow: 1;
+    margin-inline-start: 8px;
+    margin-right: 3px;
+    background-color: white;
+    background-image: url(icon4.PNG);
+    background-repeat: no-repeat;
+    background-size: 22px 19px;
+    background-position: left 11px center;
+    padding-left: 34px;
+}
+
+.row3 {
+    display: flex;
+    color: #cdcdd7;
+    font-size: 14px;
+    font-weight: bold;
+    margin-inline-start: 9px;
+    padding-bottom: 8px;
+}
+
+.labels1 {
+    flex-grow: 2;
+    border-right-color: gainsboro;
+    border-right-style: groove;
+    margin-right: 8px;
+    width: 31.5%;
+}
+
+#labelmax {
+    float: right;
+    font-weight: initial;
+    font-size: small;
+    margin-right: 8px;
+    margin-top: -17px;
+}
+
+#max {
+    float: right;
+    margin-right: 8px;
+    margin-top: -16px;
+    width: -moz-available;
+    height: 21px;
+    border: aliceblue;
+}
+
+.labels2,
+.labels3,
+.labels4 {
+    flex-grow: 1;
+    border-right-color: gainsboro;
+    border-right-style: groove;
+    margin-right: 8px;
+    width: 15.5%;
+}
+
+.labels5 {
+    flex-grow: 1;
+    width: 15.5%;
+    margin-right: -5px;
+}
+
+#accomodation,
+#guestrating,
+#hotellocation,
+#morefilters {
+    width: 90%;
+    border: none;
+    background: transparent;
+    color: white;
+    -webkit-appearance: none;
+    background-image: url(icon8.PNG);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: right 11px center;
+}
+
+
+
+#main {
+    background-color: gainsboro;
+}
+
+#firstrow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.mapimage {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+}
+
+.mapimage img {
+    width: 205px;
+    height: 55px;
+    margin: 10px;
+    border: 2px white solid;
+}
+
+.mapimage .btn-primary {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-124%, -54%);
+    background-color: white;
+    color: #37454d;
+    border: 0.1px black solid;
+    font-size: 15px;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.mapimage .btn-primary:hover {
+    background-color: grey;
+}
+
+.forfloat {
+    margin: 23px;
+    margin-right: 10px;
+    background-image: url(icon5.PNG);
+    background-repeat: no-repeat;
+    background-size: 25px 25px;
+    background-position: right;
+    padding-right: 42px;
+}
+
+#forsortlabel {
+    font-weight: bold;
+    font-size: medium;
+}
+
+#sort {
+    height: 35px;
+    margin-right: -13px;
+}
+
+#forflex2,
+#forflex3 {
+    display: flex;
+    background-color: white;
+    width: 98%;
+    border: 1px grey solid;
+    margin-left: 7px;
+}
+
+#forflex21,
+#forflex31 {
+    display: flex;
+    background-color: white;
+    width: 63%;
+}
+
+.description,
+.description1 {
+    margin-left: 10px;
+    margin-top: -22px;
+    display: grid;
+}
+
+#elh2,
+#elh21 {
+    margin-bottom: -8px;
+    margin-top: 35px;
+}
+
+h2 {
+    color: #37454d;
+}
+
+.forstars {
+    display: flex;
+    flex-direction: column;
+}
+
+#elp,
+#elp1 {
+    margin-top: 10px;
+    padding-left: 66px;
+    background-image: url(icon2.PNG);
+    background-repeat: no-repeat;
+    background-size: 63px 20px;
+    background-position: left -1px;
+}
+
+#marginexcloc,
+#marginexcloc1 {
+    margin-bottom: 23px;
+    margin-top: -7px;
+}
+
+p {
+    font-size: 14px;
+}
+
+#imghotel1,
+#imghotel2 {
+    margin-top: 5px;
+    margin-left: 6px;
+    background-image: url(icon6.PNG);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: right 11px center;
+}
+
+#heart {
+    position: absolute;
+    margin-left: -189px;
+    margin-top: 15px;
+    height: 25px;
+}
+
+#heart:hover {
+    opacity: 0.5;
+}
+
+.col2,
+.col21 {
+    background-color: white;
+    border-right: grey 1px solid;
+    border-left: grey 1px solid;
+    width: 10%;
+    font-size: smaller;
+    display: grid;
+    margin-top: 11px;
+    margin-bottom: 11px;
+}
+
+.forborder1,
+.forborder2 {
+    border-bottom: 1px grey solid;
+    height: 123px;
+    display: grid;
+}
+
+#site1,
+#site2,
+#site3,
+#site11,
+#site21,
+#site31 {
+    text-decoration: none;
+    color: dimgray;
+    cursor: pointer;
+}
+
+#site1:hover,
+#site2:hover,
+#site3:hover,
+#site11:hover,
+#site21:hover,
+#site31:hover {
+    text-decoration-line: underline;
+}
+
+#site1,
+#site11 {
+    margin-top: 7px;
+}
+
+#labelmore,
+#labelmore1 {
+    margin-bottom: -8px;
+}
+
+#moredeals,
+#moredeals1 {
+    margin: auto;
+    margin-bottom: 7px;
+    margin-top: 0px;
+    background-image: url(icon9.PNG);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: right 0px center;
+    -webkit-appearance: none;
+    width: auto;
+    padding-right: 12px;
+    padding-bottom: 3px;
+}
+
+.col3,
+.col31 {
+    background-color: white;
+    border-right: grey;
+    width: 26.7%;
+    font-size: smaller;
+    display: grid;
+}
+
+#siterec,
+#siterec1,
+#siterec11 {
+    color: green;
+    text-decoration: none;
+    margin-top: 27px;
+}
+
+#siterec:hover,
+#siterec11:hover {
+    text-decoration-line: underline;
+}
+
+#siterec1 {
+    color: red;
+    margin-top: 10px;
+    margin-bottom: -15px;
+}
+
+#siterec11 {
+    margin-top: -21px;
+    margin-bottom: -9px;
+    padding: 6px;
+}
+
+#recprice,
+#recprice1,
+#recprice2 {
+    font-size: 21px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+#recprice1 {
+    text-decoration: line-through;
+}
+
+#recprice2 {
+    margin-top: 1px;
+}
+
+#inline1,
+#inline11 {
+    margin-top: -50px;
+}
+
+#inline11 {
+    margin-top: -25px;
+}
+
+#inline2,
+#inline21 {
+    color: green;
+}
+
+#viewdeal,
+#viewdeal1 {
+    background-color: green;
+    border: none;
+    color: white;
+    padding: 0.6em 0.9em;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    flex-grow: 1;
+    margin-bottom: 6px;
+    margin-block-start: -17px;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-top: -31px;
+    height: 45px;
+    background-image: url(icon7.PNG);
+    background-repeat: no-repeat;
+    background-size: 15px 15px;
+    background-position: right 11px center;
+}
+
+#viewdeal {
+    margin-bottom: -14px;
+}
+
+#viewdeal:hover {
+    background-color: #006600;
+}
+
+#viewdeal1:hover {
+    background-color: #006600;
+}
+
+#freebreakfast {
+    background-color: white;
+    color: green;
+    border: 1px solid #4CAF50;
+    text-align: center;
+    cursor: pointer;
+    margin-left: 6px;
+    margin-right: 6px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    height: 20px;
+}
+
+#rate1,
+#rate2 {
+    background-color: green;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    height: 23px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
